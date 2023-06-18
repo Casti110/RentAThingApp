@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.hoofdMenuController">
+   <center>
+      <AnchorPane prefHeight="374.0" prefWidth="377.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="overzicht" layoutX="38.0" layoutY="164.0" mnemonicParsing="false" onAction="#overzichtClicked" text="Overzicht" />
+            <Button fx:id="beheer" layoutX="117.0" layoutY="164.0" mnemonicParsing="false" onAction="#beheerClicked" text="Beheer" />
+            <Label layoutX="96.0" layoutY="98.0" prefHeight="18.0" prefWidth="116.0" text="HOOFDMENU">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="aangemeldUSer" layoutX="203.0" layoutY="190.0" prefHeight="18.0" prefWidth="84.0" />
+            <Button layoutX="178.0" layoutY="164.0" mnemonicParsing="false" onAction="#uitlogClicked" text="Uitloggen" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="132.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
