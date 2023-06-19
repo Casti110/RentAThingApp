@@ -19,15 +19,14 @@ public class OverzichtController implements Initializable {
 
     @FXML
     public TableView<Product> productTable;
-    @FXML
-    public TableColumn<Product,Integer> productIDColumn;
+
     @FXML
     public TableColumn<Product,String> merkColumn;
 
     @FXML
     public TableColumn<Product,String> soortColumn;
     @FXML
-    public TableColumn<Product, Boolean> statusVerhuurdcolumn;
+    public TableColumn<Product, String> statusVerhuurdcolumn;
 
 
 
@@ -35,14 +34,14 @@ public class OverzichtController implements Initializable {
 
     public void setProductTable(ObservableList<Product> products,
                                 TableView<Product> productTable,
-                                TableColumn<Product,Integer> productIDColumn,
+
                                 TableColumn<Product, String> merkColumn,
                                 TableColumn<Product, String> soortColumn,
-                                TableColumn<Product, Boolean> statusVerhuurdcolumn){
+                                TableColumn<Product, String> statusVerhuurdcolumn){
 
         productTable.setItems(products);
 
-        productIDColumn.setCellValueFactory(new PropertyValueFactory<>("ProductID"));
+
         merkColumn.setCellValueFactory(new PropertyValueFactory<>("Merk"));
         soortColumn.setCellValueFactory(new PropertyValueFactory<>("Soort"));
         statusVerhuurdcolumn.setCellValueFactory(new PropertyValueFactory<>("Status"));
@@ -52,18 +51,24 @@ public class OverzichtController implements Initializable {
 
     public void displayData(ObservableList<Product> products){
 
-        setProductTable(products,productTable,productIDColumn,merkColumn,soortColumn, statusVerhuurdcolumn);
+
+        setProductTable(products,productTable,merkColumn,soortColumn, statusVerhuurdcolumn);
+
+
     }
+
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         displayData(Voorraad.getAlleProducten());
+
     }
 
 
 
-    public void onActionExit(ActionEvent event) {
+    public void changeToMainScreen(ActionEvent event) {
         setScene("HoofdMenuScreen");
     }
 }

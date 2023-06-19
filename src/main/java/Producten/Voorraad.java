@@ -11,18 +11,13 @@ public class Voorraad  implements Observer {
 
     private static  ObservableList<Product> alleProducten = FXCollections.observableArrayList();
 
-
-
-
     public Voorraad(){
 
         alleProducten.add(ProductFactory.PERSONEN_AUTO.createProduct());
+        alleProducten.add(ProductFactory.BOOR_MACHINE.createProduct());
+        alleProducten.add(ProductFactory.VRACHT_AUTO.createProduct());
 
     }
-
-
-
-
 
     public void addProduct(Product producten){
         alleProducten.add(producten);
@@ -36,24 +31,10 @@ public class Voorraad  implements Observer {
         Voorraad.alleProducten = alleProducten;
     }
 
-
-
-
-
-
-
     @Override
     public void update(Observable o, Object arg) {
 
     }
-
-
-
-
-
-
-
-
 
 
 }

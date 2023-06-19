@@ -10,6 +10,6 @@ public  class PersonenAutoFactory extends ProductFactory {
 
     @Override
     public Product createProduct() {
-        return new PersonenAuto(1,"Seat Leon","PersonenAuto",30,false,1600,1600);
+        return new PersonenAuto("Seat Leon","PersonenAuto",55.0,false,1600,1600);
     }
 }

@@ -41,6 +41,8 @@ public class RentAThingApp extends Application {
 
         stage.show();
         this.stage = stage;
+        new Voorraad();
+
 
 
     }

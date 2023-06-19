@@ -2,7 +2,7 @@ package Producten;
 
 public abstract class Product {
 
-    int productId;
+
     String merk;
 
     String soort;
@@ -10,17 +10,15 @@ public abstract class Product {
     boolean statusVerhuur;
 
 
-    public Product(int productId, String merk, String soort, double huurPrijs, boolean statusVerhuur) {
-        this.productId = productId;
+    public Product( String merk, String soort, double huurPrijs, boolean statusVerhuur) {
+
         this.merk = merk;
         this.soort = soort;
         this.huurPrijs = huurPrijs;
         this.statusVerhuur = statusVerhuur;
     }
 
-    public int getProductId() {
-        return productId;
-    }
+
 
     public String getMerk() {
         return merk;

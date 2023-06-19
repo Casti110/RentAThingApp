@@ -3,14 +3,16 @@ package Producten;
 public class PersonenAuto extends Product {
 
 
-    private final int gewicht;
-    private final  int motorinhoud;
+    private  int gewicht;
+    private   int motorinhoud;
 
-    public PersonenAuto(int productId, String merk, String soort, double huurPrijs, boolean statusVerhuur, int gewicht, int motorinhoud) {
-        super(productId, merk, soort, huurPrijs, statusVerhuur);
+    public PersonenAuto(String merk, String soort, double huurPrijs, boolean statusVerhuur, int gewicht, int motorinhoud) {
+        super( merk, soort, huurPrijs, statusVerhuur);
         this.gewicht = gewicht;
         this.motorinhoud = motorinhoud;
     }
+
+
 
     public int getGewicht() {
         return gewicht;

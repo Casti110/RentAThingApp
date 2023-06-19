@@ -8,6 +8,6 @@ public class BoorMachineFactory extends ProductFactory {
 
     @Override
     public Product createProduct() {
-        return new BoorMachine(2,"Seat","Boormachine",10,false,"cordless");
+        return new BoorMachine(2,"Makita","Boormachine",10,false,"cordless");
     }
 }

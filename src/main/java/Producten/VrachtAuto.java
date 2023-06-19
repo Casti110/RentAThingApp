@@ -2,11 +2,11 @@ package Producten;
 
 public class VrachtAuto extends Product {
 
-    private final int laadvermogen;
-    private final int motorinhoud;
+    private  int laadvermogen;
+    private  int motorinhoud;
 
     public VrachtAuto(int productId, String merk, String soort, double huurPrijs, boolean statusVerhuur, int laadvermogen, int motorinhoud) {
-        super(productId, merk, soort, huurPrijs, statusVerhuur);
+        super( merk, soort, huurPrijs, statusVerhuur);
         this.laadvermogen = laadvermogen;
         this.motorinhoud = motorinhoud;
     }
