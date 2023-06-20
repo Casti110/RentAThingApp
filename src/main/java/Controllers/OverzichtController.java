@@ -25,8 +25,7 @@ public class OverzichtController implements Initializable {
 
     @FXML
     public TableColumn<Product,String> soortColumn;
-    @FXML
-    public TableColumn<Product, String> statusVerhuurdcolumn;
+
 
 
 
@@ -36,15 +35,15 @@ public class OverzichtController implements Initializable {
                                 TableView<Product> productTable,
 
                                 TableColumn<Product, String> merkColumn,
-                                TableColumn<Product, String> soortColumn,
-                                TableColumn<Product, String> statusVerhuurdcolumn){
+                                TableColumn<Product, String> soortColumn
+                                ){
 
         productTable.setItems(products);
 
 
         merkColumn.setCellValueFactory(new PropertyValueFactory<>("Merk"));
         soortColumn.setCellValueFactory(new PropertyValueFactory<>("Soort"));
-        statusVerhuurdcolumn.setCellValueFactory(new PropertyValueFactory<>("Status"));
+
 
 
     }
@@ -52,7 +51,7 @@ public class OverzichtController implements Initializable {
     public void displayData(ObservableList<Product> products){
 
 
-        setProductTable(products,productTable,merkColumn,soortColumn, statusVerhuurdcolumn);
+        setProductTable(products,productTable,merkColumn,soortColumn);
 
 
     }
@@ -70,5 +69,9 @@ public class OverzichtController implements Initializable {
 
     public void changeToMainScreen(ActionEvent event) {
         setScene("HoofdMenuScreen");
+    }
+
+    public void clikedElement(){
+        setScene("DetailScreen");
     }
 }

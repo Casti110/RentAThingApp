@@ -2,6 +2,8 @@ package AbstractFactories;
 
 import Producten.*;
 
+import java.util.List;
+
 
 public abstract class ProductFactory  {
 
@@ -9,9 +11,9 @@ public abstract class ProductFactory  {
 
 
 
-    private String merk;
+    String merk;
 
-    private String soort;
+    String soort;
     private double huurPrijs;
     private boolean statusVerhuur;
     private String status;
@@ -42,5 +44,5 @@ public abstract class ProductFactory  {
 
 
 
-    public abstract Product createProduct();
+    public abstract List<Product> createProduct();
 }

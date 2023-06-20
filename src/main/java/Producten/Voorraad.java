@@ -9,15 +9,24 @@ import java.util.Observer;
 
 public class Voorraad  implements Observer {
 
-    private static  ObservableList<Product> alleProducten = FXCollections.observableArrayList();
+    public static  ObservableList<Product> alleProducten = FXCollections.observableArrayList();
+
+
 
     public Voorraad(){
 
-        alleProducten.add(ProductFactory.PERSONEN_AUTO.createProduct());
-        alleProducten.add(ProductFactory.BOOR_MACHINE.createProduct());
-        alleProducten.add(ProductFactory.VRACHT_AUTO.createProduct());
+        alleProducten.addAll(ProductFactory.PERSONEN_AUTO.createProduct());
+        alleProducten.addAll(ProductFactory.BOOR_MACHINE.createProduct());
+        alleProducten.addAll(ProductFactory.VRACHT_AUTO.createProduct());
+
+
+
+
+
 
     }
+
+
 
     public void addProduct(Product producten){
         alleProducten.add(producten);
@@ -26,6 +35,8 @@ public class Voorraad  implements Observer {
     public static ObservableList<Product> getAlleProducten() {
         return alleProducten;
     }
+
+
 
     public static void setAlleProducten(ObservableList<Product> alleProducten) {
         Voorraad.alleProducten = alleProducten;

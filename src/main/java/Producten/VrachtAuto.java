@@ -6,10 +6,13 @@ public class VrachtAuto extends Product {
     private  int motorinhoud;
 
     public VrachtAuto(int productId, String merk, String soort, double huurPrijs, boolean statusVerhuur, int laadvermogen, int motorinhoud) {
-        super( merk, soort, huurPrijs, statusVerhuur);
+        super( productId,merk, soort, huurPrijs, statusVerhuur);
         this.laadvermogen = laadvermogen;
         this.motorinhoud = motorinhoud;
     }
+
+
+
 
     public int getLaadvermogen() {
         return laadvermogen;

@@ -1,5 +1,6 @@
 package Controllers;
 
+import AbstractFactories.PersonenAutoFactory;
 import AbstractFactories.ProductFactory;
 import Producten.BoorMachine;
 import Producten.PersonenAuto;
@@ -42,6 +43,7 @@ public class RentAThingApp extends Application {
         stage.show();
         this.stage = stage;
         new Voorraad();
+
 
 
 
